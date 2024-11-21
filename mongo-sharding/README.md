@@ -14,7 +14,7 @@ docker compose up -d
 ./scripts/mongo-init.sh
 ```
 
-Проверяем количество записей на шардах
+Проверяем общее количество записей и кол-во записей на шардах
 
 ```shell
 ./scripts/mongo-init.sh

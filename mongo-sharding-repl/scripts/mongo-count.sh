@@ -14,7 +14,7 @@ EOF
 # Получаем кол-во записей на Шарде-1
 ###
 echo "Кол-во документов на Шарде-1:"
-docker compose exec -T shard1 mongosh --port 27018 --quiet <<EOF
+docker compose exec -T shard1_db2 mongosh --port 27019 --quiet <<EOF
 use somedb
 db.helloDoc.countDocuments()
 exit();
@@ -24,7 +24,7 @@ EOF
 # Получаем кол-во записей на Шарде-2
 ###
 echo "Кол-во документов на Шарде-2:"
-docker compose exec -T shard2 mongosh --port 27019 --quiet <<EOF
+docker compose exec -T shard2_db3 mongosh --port 27023 --quiet <<EOF
 use somedb
 db.helloDoc.countDocuments()
 exit();
